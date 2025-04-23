@@ -10,7 +10,7 @@ describe('Funcionalidade: Cadastro', () => {
       //      cy.screenshot()
       //  }); 
     
-        it('Deve fazer cadastro sem sucesso devido cpf já ser cadastrado', () => {
+        it('Deve fazer cadastro SEM sucesso por cpf já ser cadastrado', () => {
             
             cy.get('#cpf').type('41835429874')
             cy.get('.sc-kDrquE > .MuiButtonBase-root').click()

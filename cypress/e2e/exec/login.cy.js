@@ -6,9 +6,9 @@ describe('Funcionalidade: Já estou inscrito - Login', () => {
         cy.visit('https://buzz.dev.inteli.edu.br/signup?src=92d8ec6585cd2d5e3e2dc45723e616eb') 
     });
 
-  //  afterEach (() => {
-  //      cy.screenshot()
-  //  }); 
+  //afterEach (() => {
+ // cy.screenshot()
+ // }); 
 
     it('Não deve fazer login com sucesso, pois e-mail está incorreto', () => {
            
@@ -54,7 +54,6 @@ describe('Funcionalidade: Já estou inscrito - Login', () => {
         cy.get('.sc-eKtvVk > .MuiButton-root').click()
         cy.get('#errorField-helper-text').should('contain', 'E-mail ou CPF informado é inválido')
         cy.wait(2000)
-        cy.get('.MuiButtonBase-root > .MuiTypography-root').click()
     }),
 
     it('Não deve fazer login com sucesso, pois campo de e-mail/cpf excede 60 caracteres', () => {
@@ -75,6 +74,7 @@ describe('Funcionalidade: Já estou inscrito - Login', () => {
         cy.get('.MuiInputAdornment-root > .MuiButtonBase-root').click()
         cy.wait(3000)
     }),
+
 
 
     it('Deve fazer login com sucesso', () => {
